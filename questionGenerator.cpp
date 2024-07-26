@@ -10,8 +10,8 @@ int returnRandomNumInRange(int upper) {
     return rand() % upper;
 }
 
-tuple<string, int> getInfo() {
-    string answer1;
+tuple<char, int> getInfo() {
+    char answer1;
     int digits;
     cout << "Would you like an addition, substraction, multiplication or division question? ";
     cin >> answer1;
@@ -24,7 +24,19 @@ tuple<string, int> getInfo() {
 
 int main() {
     
-    tuple<string, int> newTuple = getInfo();
+    tuple<char, int> newTuple = getInfo();
+    char div = '/', mult = '*', add = '+', sub = '-';
     
-    
+    if(get<0>(newTuple) == div) {
+        cout << "We shall divide with " << get<1>(newTuple) << " digits!";
+    } else if(get<0>(newTuple) == mult) {
+        cout << "We shall multiply with " << get<1>(newTuple) << " digits!";
+    } else if(get<0>(newTuple) == add) {
+        cout << "We shall add with " << get<1>(newTuple) << " digits!";
+    } else if(get<0>(newTuple) == sub) {
+        cout << "we shall subtract with " << get<1>(newTuple) << " digits!";
+    } else {
+        cout << "Improper choice";
+    }
+     
 }
