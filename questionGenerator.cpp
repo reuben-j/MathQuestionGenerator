@@ -6,7 +6,7 @@
 
 using namespace std;
 
-float returnRandomNumInRange(int upper) {
+double returnRandomNumInRange(int upper) {
     int sum = 1;
     for(int i = 0; i < upper; i++) {
         sum *= 10;
@@ -14,9 +14,9 @@ float returnRandomNumInRange(int upper) {
     srand(time(0));
     return rand() % sum;
 }
-float returnSmallerNumInRange(int upper) {
+double returnSmallerNumInRange(int upper) {
     int sum = 1;
-    for(int i = 0; i < upper -2; i++) {
+    for(int i = 0; i < upper -1; i++) {
         sum *= 10;
     }
     srand(time(0)+1);
@@ -37,7 +37,7 @@ tuple<char, int> getInfo() {
 
 int main() {
     
-    float actualAnswer = 0.00, userAnswer = 0.00;
+    double actualAnswer = 0.00, userAnswer = 0.00;
     tuple<char, int> newTuple = getInfo();
     char div = '/', mult = '*', add = '+', sub = '-';
     
