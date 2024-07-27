@@ -71,7 +71,7 @@ int main() {
     cout << endl << "Answer: ";
     cin >> userAnswer;
     if(userAnswer == roundf(actualAnswer * 100) / 100) {
-        cout << "Nice one, the answer was: " << roundf(actualAnswer * 100) / 100;
+        cout << "Nice one! The answer was: " << roundf(actualAnswer * 100) / 100;
     } else {
         cout << "Wrong, the answer was: " << roundf(actualAnswer * 100) / 100;
     }
